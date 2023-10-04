@@ -1,15 +1,50 @@
 
-// let left_operator;
-// let right_operator;
-// let operator;
-// 
-// 
-// if (operator === "+"){
-  // 
-// }
+let left_operator;
+let right_operator;
+let operator;
 
-let arr1 = new Array(5);
-let arr2 = [1, 2, 3, 4, 5, 6, 7, 8];
+left_operator = 14;
+operator = "-";
+right_operator = 34;
 
-let arr3 = new Array(5, 4, 3, 2, 1);
+
+switch(operator) {
+  case "+":
+    console.log(left_operator + right_operator);
+    break;
+  case "-":
+    console.log(left_operator - right_operator);
+    break;
+  case "*":
+    console.log(left_operator - right_operator);
+    break;
+  case "/":
+    console.log(left_operator - right_operator);
+    break;
+  case "%":
+    console.log(left_operator - right_operator);
+    break;
+  default:
+    console.log(NaN)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
