@@ -1,24 +1,27 @@
 
 
-const isEven = function(userInput){
+function isEven(userInput){
   
-  let output = false;
+  let output;
   userInput -=  2;
 
-  if(userInput != 0 && userInput != 1){
-    isEven(userInput);
-  }
-  // if (userInput  == 1){ 
-  //   output =  false;
-  // } 
-  else if (userInput == 0){ 
+  if (userInput == 0){ 
     output = true;
   }
-  
-  
+  else if (userInput  == 1){
+    output =  false;
+  } 
+  else{
+    output = isEven(userInput);
+  }
+   
   return output;
 }
 
 
 let output = isEven(50);
 console.log(output);
+
+
+let  newOutput= isEven(75);
+console.log(newOutput);
