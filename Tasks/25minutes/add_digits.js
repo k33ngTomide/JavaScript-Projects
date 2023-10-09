@@ -1,14 +1,17 @@
 
 
-function addDigits(number){
+function addDigits(input){
+  let number = String(input);
 
+  if(Number(number) <= 9){ return Number(number);}
   let returnedTotal = adder(number);
 
   if (returnedTotal >= 10){
-    returnedTotal = addDigits(String(returnedTotal));
+    returnedTotal = addDigits(returnedTotal);
   }
 
   return returnedTotal;
+  
 }
 
 function adder(number){
@@ -21,7 +24,14 @@ function adder(number){
 
 
 
-const expected = addDigits("384");
+const expected = addDigits(0);
 console.log(expected);
-if (expected == 6) {console.log("Passed");}
+
+const value = addDigits(-9);
+console.log(value);
+
+
+
+const expected1 = addDigits("384");
+if (expected1 == 6) {console.log("Passed");}
 else {console.log("Failed");}
