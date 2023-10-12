@@ -27,11 +27,11 @@ function adder(number){
 const expected = addDigits(0);
 console.log(expected);
 
-const value = addDigits(-9);
+const value = addDigits(343);
 console.log(value);
 
 
 
-const expected1 = addDigits("384");
+const expected1 = addDigits(384);
 if (expected1 == 6) {console.log("Passed");}
 else {console.log("Failed");}
