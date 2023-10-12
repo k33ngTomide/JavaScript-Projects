@@ -20,4 +20,6 @@ function listToArray(list){
 
   let array = [];
 
+  
+
 }
