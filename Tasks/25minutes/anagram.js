@@ -1,5 +1,8 @@
 
-function isAnagram(firstWord, secondWord){
+function isAnagram(firstWordInputted, secondWordInputted){
+  firstWord = firstWordInputted.toLowerCase();
+  secondWord = secondWordInputted.toLowerCase();
+
   if (firstWord.length != secondWord.length){return false;}
 
   let countLetters = function(word){
@@ -12,8 +15,7 @@ function isAnagram(firstWord, secondWord){
           count++;
         }
       }
-      let obj = word[counter];
-      lettersInWord.push({obj, count});
+      lettersInWord.push(count);
       count = 0;
     }
     return lettersInWord.sort;
@@ -28,13 +30,32 @@ function isAnagram(firstWord, secondWord){
     return true;
   }
 
+  getTotalAscii = (character) => {
+    let total = 0;
+    for(let counter in character){
+      let ascii = character.charCodeAt(counter);
+      total += ascii;
+    }
+    return total;
+  }
+  
+
   let countedFirstWord = countLetters(firstWord);
   let countedSecondWord = countLetters(secondWord);
   let container = itContain(firstWord, secondWord);
+
+  let firstAscii = getTotalAscii(firstWord);
+  let secondAscii = getTotalAscii(secondWord);
+
+  if (firstAscii != secondAscii){ return false;}
   
   if(countedFirstWord == countedSecondWord && container){ return true;}
   else{ return false;}
   
 }
+
+// console.log(isAnagram("anagram", "nAgaram"));
+// console.log(isAnagram("chair", "cheer"));
+// console.log(isAnagram("anagram", "nnnagrm"));
 
 module.exports = isAnagram;
