@@ -104,7 +104,7 @@ class LinkedList{
       // }
     }
 
-    this.isPresent = (value) => {
+    this.contain = (value) => {
       if (this.head !== null){
         let current = this.head;
         while( current !== null){
@@ -122,9 +122,17 @@ class LinkedList{
 
       if (this.head !== null && list !== null) {
         let current = this.head;
-        while (current !== null){
-          
+        let listCurrent = list.head;
+        let store = null;
+
+        while(listCurrent !== null){
+          if(!this.contain(listCurrent.value)){
+            this.insertAtEnd(listCurrent.value);
+          }
+          listCurrent = listCurrent.nextElement;
         }
+
+        return this;
 
       }
 
