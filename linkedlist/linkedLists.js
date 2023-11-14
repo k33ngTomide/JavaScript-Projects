@@ -104,7 +104,10 @@ class LinkedList{
       // }
     }
 
-    this.contain = (value) => {
+    this.contains = (value) => {
+      if(this.head === null){
+        return false;
+      }
       let current = this.head;
       while( current !== null){
         if(current.value === value){

@@ -91,7 +91,7 @@ test("that search method return true if value is present", () => {
   list.insertAtEnd(4);
   list.insertAtEnd(16);
 
-  expect(list.contain(10)).toBe(true);
+  expect(list.contains(10)).toBe(true);
 
 })
 
