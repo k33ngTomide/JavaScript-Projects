@@ -105,17 +105,14 @@ class LinkedList{
     }
 
     this.contain = (value) => {
-      if (this.head !== null){
-        let current = this.head;
-        while( current !== null){
-          if(current.value === value){
-            return true;
-          }
-          current = current.nextElement;
+      let current = this.head;
+      while( current !== null){
+        if(current.value === value){
+          return true;
         }
-        return false;
+        current = current.nextElement;
       }
-
+      return false;
     }
 
     this.union = (list) => {
@@ -131,15 +128,12 @@ class LinkedList{
           }
           listCurrent = listCurrent.nextElement;
         }
-
         return this;
-
       }
 
     }
 
   }
-
 
 }
 

@@ -110,11 +110,11 @@ test("that for union", () => {
   listC.insertAtEnd(22);
   listC.insertAtEnd(18);
   listC.insertAtEnd(56);
-  listC.insertAtEnd(22);
   listC.insertAtEnd(14);
-  listA.insertAtEnd(22);
+  listC.insertAtEnd(12);
 
-  expect(listA.union(listB)).toBe(listC.getSize());
+  expect(listA.union(listB).getSize()).toBe(listC.getSize());
+  expect(JSON.stringify(listA.union(listB))).toBe(JSON.stringify(listC));
   
 })
 
