@@ -54,7 +54,7 @@ test("test that size of linked list can be received", () => {
   // list.insertAtEnd(5);
   // list.deleteEnd();
 // 
-  // expect(list.getLast()).toBe(6);
+  // expect(list.getSize()).toBe(2);
 // })
 
 test("that duplicate can be removed", () => {
@@ -93,5 +93,28 @@ test("that search method return true if value is present", () => {
 
   expect(list.isPresent(10)).toBe(true);
 
+})
+
+test("that for union", () => {
+  let listA = new LinkedList();
+  listA.insertAtEnd(22);
+  listA.insertAtEnd(18);
+  listA.insertAtEnd(56);
+
+  let listB = new LinkedList();
+  listB.insertAtEnd(14);
+  listB.insertAtEnd(12);
+  listB.insertAtEnd(22);
+
+  let listC = new LinkedList();
+  listC.insertAtEnd(22);
+  listC.insertAtEnd(18);
+  listC.insertAtEnd(56);
+  listC.insertAtEnd(22);
+  listC.insertAtEnd(14);
+  listA.insertAtEnd(22);
+
+  expect(listA.union(listB)).toBe(listC.getSize());
+  
 })
 

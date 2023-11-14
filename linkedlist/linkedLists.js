@@ -118,6 +118,18 @@ class LinkedList{
 
     }
 
+    this.union = (list) => {
+
+      if (this.head !== null && list !== null) {
+        let current = this.head;
+        while (current !== null){
+          
+        }
+
+      }
+
+    }
+
   }
 
 
