@@ -2,6 +2,12 @@ const Node = require("./node");
 const LinkedList = require("./linkedLists");
 
 
+test("test that size of linked list can be received", () => {
+  let list = new LinkedList();
+  expect(list.isEmpty()).toBe(true);
+})
+
+
 test("test that Element can be inserted at the head", () => {
   let list = new LinkedList();
   list.insertAtHead(5);
@@ -32,14 +38,60 @@ test("test that Element can be added at the end", () => {
 
 test("test that size of linked list can be received", () => {
   let list = new LinkedList();
-  list.insertAtEnd(7);
-  list.insertAtEnd(6);
-  list.insertAtEnd(5);
+  list.insertAtEnd(30);
+  list.insertAtEnd(40);
+  list.insertAtEnd(90);
+  list.insertAtEnd(10);
+  list.insertAtEnd(12);
 
-  expect(list.getSize()).toBe(3);
+  expect(list.getSize()).toBe(5);
 })
 
-test("test that size of linked list can be received", () => {
+// test("test that deleteEnd removes the element at the end", () => {
+  // let list = new LinkedList();
+  // list.insertAtEnd(7);
+  // list.insertAtEnd(6);
+  // list.insertAtEnd(5);
+  // list.deleteEnd();
+// 
+  // expect(list.getLast()).toBe(6);
+// })
+
+test("that duplicate can be removed", () => {
   let list = new LinkedList();
-  expect(list.isEmpty()).toBe(true);
+  list.insertAtEnd(1);
+  list.insertAtEnd(1);
+  list.insertAtEnd(1);
+  list.insertAtEnd(2);
+  list.insertAtEnd(2);
+  list.insertAtEnd(3);
+  list.insertAtEnd(3);
+  list.insertAtEnd(4);
+  list.insertAtEnd(4);
+
+
+  let newList = new LinkedList();
+  newList.insertAtEnd(1);
+  newList.insertAtEnd(2);
+  newList.insertAtEnd(3);
+  newList.insertAtEnd(4);
+
+  list.removeDuplicate();
+
+  expect(list.getSize()).toBe(4);
+
 })
+
+
+test("that search method return true if value is present", () => {
+  let list = new LinkedList();
+  list.insertAtEnd(50);
+  list.insertAtEnd(10);
+  list.insertAtEnd(90);
+  list.insertAtEnd(4);
+  list.insertAtEnd(16);
+
+  expect(list.isPresent(10)).toBe(true);
+
+})
+

@@ -58,8 +58,64 @@ class LinkedList{
       return size;
     }
 
-    this.delete = (value) => {
-      
+    this.deleteEnd = (value) => {
+      if (this.head !== null){
+        let current = this.head;
+        while( current.nextElement !== null){
+          current = current.nextElement;
+        }
+        current = null;
+      }
+    }
+
+    this.shuffle = () => {
+
+    }
+
+
+    this.removeDuplicate = () => {
+
+      let compare = this.head.nextElement;
+      let current = this.head;
+
+      while(compare){
+        
+        if(current.value === compare.value){
+          current.nextElement = compare.nextElement;
+          compare = compare.nextElement;
+        } else {
+          current = current.nextElement;
+          compare = compare.nextElement;
+        }
+      }
+      // 
+      // let pointerA = this.head;
+      // let pointerB = this.head?.nextElement;
+
+      // while(pointerB){
+        // if(pointerA.value === pointerB.value){
+          // pointerA.nextElement = pointerB.nextElement;
+          // pointerB = pointerB.nextElement;
+        // } else {
+          // pointerA = pointerA.nextElement;
+          // pointerB = pointerB.nextElement
+        // }
+        // 
+      // }
+    }
+
+    this.isPresent = (value) => {
+      if (this.head !== null){
+        let current = this.head;
+        while( current !== null){
+          if(current.value === value){
+            return true;
+          }
+          current = current.nextElement;
+        }
+        return false;
+      }
+
     }
 
   }
