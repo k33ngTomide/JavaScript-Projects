@@ -126,7 +126,7 @@ class LinkedList{
         let store = null;
 
         while(listCurrent !== null){
-          if(!this.contain(listCurrent.value)){
+          if(!this.contains(listCurrent.value)){
             this.insertAtEnd(listCurrent.value);
           }
           listCurrent = listCurrent.nextElement;
@@ -136,11 +136,11 @@ class LinkedList{
 
     }
 
-    let getValueAt = (value) => {
+    this.getValueAt = (value) => {
       if (this.head !== null){
         let length = this.getSize();
 
-        let index = length - value - 1;
+        let index = length - value;
         let counter = 0;
       
         let current = this.head

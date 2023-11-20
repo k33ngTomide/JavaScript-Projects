@@ -118,7 +118,7 @@ test("that for union", () => {
   
 })
 
-test("test that the nth number is returned", () => {
+test("test that the value at nth node is returned", () => {
   let listA = new LinkedList();
   listA.insertAtEnd(42);
   listA.insertAtEnd(25);
