@@ -136,6 +136,26 @@ class LinkedList{
 
     }
 
+    let getValueAt = (value) => {
+      if (this.head !== null){
+        let length = this.getSize();
+
+        let index = length - value - 1;
+        let counter = 0;
+      
+        let current = this.head
+        while(current !== null){
+          
+          if (counter == index){
+            return current.value;
+          }
+          counter += 1;
+          current = current.nextElement;
+        }
+      }
+
+    }
+
   }
 
 }

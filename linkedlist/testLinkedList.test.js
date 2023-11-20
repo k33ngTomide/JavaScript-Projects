@@ -118,3 +118,15 @@ test("that for union", () => {
   
 })
 
+test("test that the nth number is returned", () => {
+  let listA = new LinkedList();
+  listA.insertAtEnd(42);
+  listA.insertAtEnd(25);
+  listA.insertAtEnd(34);
+  listA.insertAtEnd(3);
+  listA.insertAtEnd(20);
+
+  expect(listA.getValueAt(3)).toBe(34);
+
+})
+
