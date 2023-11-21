@@ -156,6 +156,30 @@ class LinkedList{
 
     }
 
+    this.isPalindrome = () => {
+      if(this.head !== null) {
+        
+        let all = " ";
+        let current = this.head;
+
+        while(current !== null){
+          all += current.value + " ";
+          current = current.nextElement;
+        }
+        
+        let newAll = all.split("").reverse().join("");
+        
+        console.log(all);
+        console.log(newAll);
+        if (newAll === all){
+          return true;
+        } else{
+          return false;
+        }
+
+      }
+    }
+
   }
 
 }
@@ -164,4 +188,4 @@ LinkedList.prototype.isEmpty = () => {
   return this.head == null;
 }
 
-module.exports = LinkedList
+module.exports = LinkedList;

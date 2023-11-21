@@ -130,3 +130,22 @@ test("test that the value at nth node is returned", () => {
 
 })
 
+test("test palindrome", () => {
+  let listA = new LinkedList();
+  listA.insertAtEnd(1);
+  listA.insertAtEnd(2);
+  listA.insertAtEnd(2);
+  listA.insertAtEnd(1);
+
+  expect(listA.isPalindrome()).toBe(true);
+
+})
+
+test("test palindrome again", () => {
+  let listA = new LinkedList();
+  listA.insertAtEnd(1);
+  listA.insertAtEnd(2);
+
+  expect(listA.isPalindrome()).toBe(false);
+})
+
