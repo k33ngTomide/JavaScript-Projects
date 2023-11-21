@@ -158,7 +158,7 @@ class LinkedList{
 
     this.isPalindrome = () => {
       if(this.head !== null) {
-        
+
         let all = " ";
         let current = this.head;
 
@@ -169,8 +169,6 @@ class LinkedList{
         
         let newAll = all.split("").reverse().join("");
         
-        console.log(all);
-        console.log(newAll);
         if (newAll === all){
           return true;
         } else{
