@@ -1,0 +1,36 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: gray;
+  gap: 30px;
+}
+
+.bank{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+#account, #bank_name{
+  display: block;
+  border-radius: 8px;
+  height: 50px;
+  width: 500px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+#confirm-button{
+  display: block;
+  border-radius: 8px;
+  height: 50px;
+  width: 300px;
+  background-color: black;
+  color: wheat;
+  align-self: center;
+}
